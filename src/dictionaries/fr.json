@@ -1,0 +1,42 @@
+{
+	"navigation": {
+		"login": "Se connecter",
+		"register": "Inscrivez-vous maintenant",
+		"links": [
+			{
+				"path": "/",
+				"name": "Maison"
+			},
+			{
+				"path": "/jobs",
+				"name": "Trouver un emploi"
+			},
+			{
+				"path": "/employers",
+				"name": "Employeuses"
+			},
+			{
+				"path": "/candidates",
+				"name": "Candidates"
+			},
+			{
+				"path": "/blog",
+				"name": "Blog"
+			},
+			{
+				"path": "/about",
+				"name": "À propos"
+			},
+			{
+				"path": "/contact",
+				"name": "Contact"
+			}
+		]
+	},
+	"homepage": {
+		"banner": {
+			"h1": "Libérez votre avenir : trouvez votre emploi idéal dès aujourd'hui !",
+			"p": "Bienvenue chez Jobest, là où l'emploi de vos rêves vous attend ! Parcourez des milliers d'offres d'emploi."
+		}
+	}
+}

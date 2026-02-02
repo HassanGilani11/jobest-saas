@@ -1,0 +1,684 @@
+/*-------------------------------
+    Dark tmeplate  CSS
+-------------------------------*/
+.switch-theme-mode {
+    position: fixed;
+    top: 200px;
+    right: 15px;
+    z-index: 99;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+    &.round {
+        border-radius: 50%;
+
+        &:before {
+            border-radius: 50%;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 35px;
+        width: 35px;
+        left: 0px;
+        bottom: 4px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        box-shadow: 0 0px 15px #2020203d;
+        background: #fff url('/images/night.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 17px;
+    }
+}
+
+input:checked+.slider {
+    background-color: transparent;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px transparent;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    background: #000 url('/images/sunny.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+}
+
+
+
+.navbar-brand,
+.logo {
+    .logo-dark {
+        display: none !important;
+    }
+
+    .logo-light {
+        display: block !important;
+    }
+}
+
+
+.theme-dark {
+
+    .navbar-brand,
+    .logo {
+        .logo-dark {
+            display: block !important;
+        }
+
+        .logo-light {
+            display: none !important;
+        }
+    }
+
+    .text-dark,
+    .btn.style-four,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--whiteColor) !important;
+    }
+
+    body {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    body,
+    .db-wrapper .db-main,
+    .responsive-navbar {
+        background-color: #000;
+    }
+
+    .bg-aqua,
+    .bg-haze,
+    .page-nav li a,
+    .login-form-wrap .or-text span,
+    .job-card.style-four,
+    .featured-job-wrap.style-two:after,
+    .navbar-area .navbar-top,
+    .navbar-area.sticky {
+        background-color: var(--codColor) !important;
+    }
+
+    .page-nav li:first-child a i,
+    .page-nav li:last-child a i,
+    .text-title,
+    a,
+    .link.style-one,
+    .text_secondary,
+    .text-title,
+    .page-nav li a:hover,
+    .page-nav li a.active,
+    .rating li i,
+    .job-desc-meta li i,
+    .navbar-area .navbar-top p,
+    .navbar-area .navbar-top p .link,
+    .job-card.style-one .job-title-wrap .job-title .job-taglist li a,
+    .post-tag span,
+    .post-share span,
+    .navbar-area .navbar .other-options .btn:hover,
+    .navbar-area .navbar .others-option .option-item .user-options li i,
+    .blog-desc p strong,
+    article p b,
+    .terms-wrap p strong,
+    .terms-wrap p b,
+    .footer-wrap .footer-widget-wrap .footer-widget .contact-list li,
+    .footer-wrap .footer-widget .contact-info li,
+    .responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list>a:hover::after,
+    .responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list>a.active::after,
+    .responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list>a::after,
+    .candidate-card.style-one h3 a,
+    .responsive-navbar .offcanvas-header .close-btn,
+    .footer-wrap .footer-widget .social-profile li a i,
+    .pp-post-item .pp-post-info h6 a,
+    .filter-close i,
+    .close-btn i,
+
+    .db-action-btn .dropdown-menu li,
+    .db-action-btn .dropdown-menu li a,
+    .blog-card.style-three .blog-metainfo li.blog-author .link,
+    .candidate-card.style-two h3 a,
+    .job-card.style-six .job-title h3 a,
+    .db-table thead tr th,
+    .db-table tbody tr td,
+    .db-wrapper .db-main .db-header .db-header-right .select-lang select,
+    .accordion-item .accordion-header .accordion-button,
+    .responsive-navbar .offcanvas-body .contact-info .contact-item a,
+    .responsive-navbar .offcanvas-body .contact-info .contact-item p,
+    .footer-wrap .copyright-text a {
+        color: var(--whiteColor);
+    }
+
+    a:hover,
+    .job-card.style-six .job-title h3 a:hover,
+    .navbar-area .navbar .navbar-left .category-menu>li>ul li a:hover,
+    .blog-card.style-one .blog-metainfo li a:hover,
+    .blog-card.style-two .blog-metainfo li a:hover,
+    .candidate-card.style-one h3 a:hover,
+    .pp-post-item .pp-post-info h6 a:hover,
+    .candidate-card.style-two h3 a:hover,
+    .blog-card.style-three h3 a:hover,
+    .job-card.style-one .job-title-wrap .job-title h3 a:hover,
+    .footer-wrap.style-one .footer-widget .footer-menu li a,
+    .job-card.style-one .job-title-wrap .job-title .job-taglist li a:hover {
+        color: var(--secondaryColor);
+    }
+
+    p,
+    .checkbox label,
+    .job-feature-item .feature-info span,
+    .comment-item-wrap .comment-item .comment-author-info .comment-author-name .comment-date,
+    .soln-wrap .soln-content .counter-card-wrap .counter-card p,
+    .breadcrumb-wrap .br-menu li,
+    .hero-wrap.style-three .hero-content p,
+    .navbar-area .navbar .others-option .option-item .user-options li span,
+    .responsive-navbar .offcanvas-body .contact-info .contact-item span,
+    .pp-post-item .pp-post-info span,
+    .footer-wrap.style-one .footer-widget .footer-menu li a,
+    .wh-wrap.style-two .wh-content .accordion-item .accordion-body p,
+    .navbar-area .navbar .navbar-left .category-menu>li>ul li a,
+    .blog-card.style-one .blog-metainfo li a,
+    .blog-card.style-two .blog-metainfo li a,
+    .comment-item-wrap .single-comment-box .comment-item .comment-author-wrap .comment-author-name .comment-date,
+    .footer-wrap .footer-widget-wrap .footer-widget .social-profile li a i,
+    .footer-wrap .copyright-text {
+        color: var(--offwhiteColor);
+    }
+
+    .navbar-area .navbar .navbar-nav>.nav-item>.nav-link.active,
+    .navbar-area .navbar .navbar-nav>.nav-item>.nav-link:hover,
+    .login-form,
+    .contact-item-wrap .contact-item h2 span,
+    .contact-item-wrap .contact-item,
+    .comment-item-wrap .comment-item .comment-author-info,
+    .footer-wrap .copyright-text,
+    .blog-card,
+    .sidebar .sidebar-widget .sidebar-widget-title,
+    .category-list li,
+    .pp-post-wrap .pp-post-item,
+    .box-title,
+    .testimonial-slider .swiper-slide.swiper-slide-active .testimonial-card.style-two,
+    .wh-wrap.style-two .wh-content .accordion-item .accordion-header .accordion-button,
+    .testimonial-card.style-one .testimonial-header,
+    .comment-item-wrap .single-comment-box .comment-item,
+    .comment-item-wrap .single-comment-box .reply-btn,
+    .responsive-navbar .offcanvas-header,
+    .responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list,
+    .responsive-navbar .offcanvas-body ul.responsive-menu .active>.responsive-menu-items li,
+    .soln-wrap .soln-content .section-title,
+    .footer-wrap.style-one .footer-bottom,
+    .filterPopupBox .filter-header,
+    .job-desc,
+    .post-metaoption.style-one,
+    .employer-desc .edu-item-wrap .edu-item:after,
+    .job-card.style-six,
+    .db-candidate-card,
+    .db-table thead tr th,
+    .db-table tbody tr td,
+    .db-chatbox-sidebar .db-chat-item-wrapper .db-chat-item:before,
+    #filterPopupModal .modal-dialog .modal-content .modal-header,
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
+        border-color: rgba(255, 255, 255, 0.19);
+    }
+
+    .blog-desc .feature-list li::before,
+    .terms-wrap .feature-list li::before {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    .navbar-area .navbar-top p .link:after,
+    .navbar-area .navbar .navbar-toggler .burger-menu span {
+        background-color: var(--whiteColor);
+    }
+
+    .link {
+
+        &.style-one,
+        &.style-three {
+            &:after {
+                background-color: var(--offwhiteColor);
+            }
+
+            &:hover {
+                color: var(--whiteColor) !important;
+            }
+        }
+    }
+
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.dropdown-toggle::before,
+    .comment-item-wrap .comment-item .comment-info .reply-btn,
+    .navbar-area .navbar .navbar-nav .nav-item .nav-link,
+    .pp-post-item h3 a,
+    .blog-metainfo li a,
+    .blog-card h3 a,
+    .responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list a,
+    .responsive-navbar .offcanvas-body ul.responsive-menu li a,
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
+        color: var(--whiteColor);
+
+        &:hover,
+        &.active {
+            color: var(--primaryColor) !important;
+        }
+    }
+
+    .text_dark,
+    .search-btn i,
+    .navbar-area .navbar-top .contact-info li,
+    .navbar-area .navbar .navbar-nav>.nav-item>.nav-link.dropdown-toggle::before {
+        color: var(--whiteColor) !important;
+    }
+
+    .navbar-area .navbar .navbar-nav>.nav-item>.nav-link.active.dropdown-toggle::before,
+    .navbar-area .navbar .navbar-nav>.nav-item>.nav-link.dropdown-toggle:hover::before,
+    .navbar-area.style-two .navbar .navbar-nav>.nav-item>.nav-link.active.dropdown-toggle::before,
+    .navbar-area .navbar .navbar-nav>.nav-item>.nav-link.active,
+    .navbar-area .navbar .navbar-nav>.nav-item>.nav-link:hover,
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.active,
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link:hover,
+    .responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list>a.active::after,
+    .responsive-navbar .offcanvas-body ul.responsive-menu .responsive-menu-list a.active,
+    .footer-wrap.style-one .footer-widget .footer-menu li a:hover,
+    .footer-wrap.style-one .footer-bottom .social-profile li a i,
+    .responsive-navbar .offcanvas-body ul.responsive-menu li a.active {
+        color: var(--primaryColor) !important;
+    }
+
+    .tag-list li a {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: var(--offwhiteColor);
+
+        &:hover {
+            color: var(--whiteColor);
+            background-color: var(--primaryColor);
+        }
+    }
+
+    .header-burger-menu img,
+    .hero-wrap.style-three .hero-content .hero-searchbox.form-group-wrap .form-group>img,
+    .pp-post-item .pp-post-info .blog-metainfo li img,
+    .navbar-area .navbar .others-option .option-item .user-options li img,
+    .blog-card.style-three .blog-metainfo li img,
+    .navbar-area .navbar-top .contact-info li img {
+        filter: brightness(0) invert(1);
+    }
+
+    .filter-area,
+    .bg-gray,
+    .db-action-btn .dropdown-menu,
+    .price-range-slider .price span,
+    .price-range-slider .price select,
+    .hero-searchbox.style-two,
+    #filterPopupModal .modal-dialog .modal-content,
+    .hero-searchbox.style-three,
+    .db-counter-card .db-counter-icon,
+    .hero-wrap.style-one:after,
+    .login-form-wrap .login-btn,
+    .db-candidate-wrapper.style-two .candidate-card,
+    .db-chatbox-sidebar .db-chat-item-wrapper .db-chat-item:before,
+    .testimonial-wrap.style-two {
+        background-color: var(--mildColor) !important;
+    }
+
+    .bg-white,
+    .bg_dark,
+    .bg-optional,
+    .hw-card.style-three:after,
+    .wp-block-quote,
+    .breadcrumb-wrap,
+    .faq-box:after,
+    .hero-searchbox.style-four,
+    .hero-wrap.style-one .hero-content .hero-searchbox,
+    .soln-wrap .soln-content,
+    .job-card.style-five,
+    .wp-blockquote,
+    .db-wrapper .db-main .db-header .db-header-right .db-notif-option .dropdown-menu,
+    .db-wrapper .db-sidebar .db-user-option .dropdown-menu,
+    .job-card.style-six:hover,
+    .candidate-card.style-two,
+    .candidate-card.style-one:after,
+    .navbar-area .navbar .other-options .notif-option .dropdown-menu,
+    .featured-job-wrap.style-one::after,
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu {
+        background-color: var(--aztechColor) !important;
+    }
+
+    .secure-box,
+    .wp-blockquote h6:before,
+    .job-feature-item .feature-icon,
+    .feature-list.style-two li,
+    .category-card.style-three {
+        background-color: var(--charcoalColor) !important;
+    }
+
+    .price-range-slider .price span:before,
+    .price-range-slider .price select,
+    .wh-wrap.style-two .wh-content .accordion-item .accordion-header .accordion-button,
+    .wh-wrap.style-two .wh-content .accordion-item .accordion-header .accordion-button span i,
+    .pricing-card.style-two .pricing-tag,
+    .pricing-card .pricing-tag span.text-para,
+    .pricing-card.style-two .pricing-tag span,
+    .login-form .form-group.style-two input,
+    .db-wrapper .db-sidebar .db-user-option .dropdown-menu ul li a,
+    .navbar-area .navbar-top .navbar-right .social-profile li a i {
+        color: var(--whiteColor);
+    }
+
+    .db-wrapper .db-main .db-header .db-header-left .db-searchbox input,
+    .footer-wrap .footer-widget .subscribe-form input,
+    .searchbox-widget input,
+    .contact-employer .form-group select,
+    .login-form .form-group select,
+    .contact-form .form-group select,
+    .comment-form .form-group select,
+    .comment-form .form-group input,
+    .comment-form .form-group textarea,
+    .contact-form .form-group input,
+    .contact-form .form-group select,
+    .contact-form .form-group textarea {
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: rgba(255, 255, 255, 0.95) !important;
+        background-color: transparent !important;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    select {
+        option {
+            background-color: var(--mildColor);
+            color: var(--whiteColor) !important;
+        }
+    }
+
+    .post-metaoption {
+        box-shadow: none;
+    }
+
+    .progress-wrap {
+        box-shadow: rgba(255, 255, 255, 0.19) 0px 0px 0px 2px inset;
+    }
+
+    .accordion-item,
+    .accordion-header,
+    .accordion-button {
+        border: none;
+    }
+
+    .db-table thead tr th,
+    .db-table tbody tr td,
+    .accordion-item {
+        background-color: transparent;
+    }
+
+    .sidebar {
+        &.style-one {
+            .sidebar-widget {
+                border-bottom-color: rgba(255, 255, 255, 0.19);
+            }
+        }
+    }
+
+    .comment-item-wrap .comment-item:after {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .candidate-card.style-one .add-to-bookmark {
+        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.19);
+    }
+
+    .category-card.style-three,
+    .candidate-card.style-one .add-to-bookmark,
+    .category-card.style-three .cat-icon,
+    .job-card.style-one,
+    .job-card.style-two,
+    .job-card.style-three {
+        border: 1px dashed rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .testimonial-card.style-one .testimonial-header img,
+    .blog-card.style-one .blog-metainfo li img,
+    .blog-card.style-two .blog-metainfo li img,
+    .blog-desc .blog-metainfo li img,
+    .employer-desc .blog-metainfo li img,
+    .candidate-desc .blog-metainfo li img,
+    .terms-wrap .blog-metainfo li img,
+    .db-wrapper .db-sidebar .db-user-option .dropdown-menu ul li img,
+    .job-desc-meta li img {
+        filter: brightness(0) invert(1);
+    }
+
+    .blog-desc .blog-metainfo li.blog-author img,
+    .employer-desc .blog-metainfo li.blog-author img {
+        filter: brightness(1) invert(0);
+    }
+
+    .section-link {
+        color: var(--offwhiteColor);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .job-tablist .nav-item .nav-link {
+        color: var(--offwhiteColor);
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        &.active,
+        &:hover {
+            color: var(--whiteColor);
+            background-color: var(--secondaryColor);
+            border-color: transparent;
+        }
+    }
+
+    .navbar-area .navbar .other-options .link:after {
+        background-color: var(--secondaryColor);
+    }
+
+    #category-select option {
+        background-color: #333;
+    }
+
+    .apply-box.style-one {
+        background-image: url(/images/about/apply-bg-dark-1.png);
+    }
+
+    .apply-box.style-two {
+        background-image: url(/images/about/apply-bg-dark-2.png);
+    }
+
+    .db-wrapper .db-main .db-header .db-header-right .select-lang select,
+    select,
+    .price-range-slider .price select {
+        background-image: url(/images/down-arrow-white.png) !important;
+
+        option {
+            background-color: var(--mildColor);
+        }
+    }
+
+    .filter-cat {
+        background-color: var(--aztechColor);
+        color: var(--whiteColor);
+        background-image: url(/images/down-arrow-white.png) !important;
+        background-position: calc(100% - 15px) 50%;
+        background-size: 10px;
+        background-repeat: no-repeat;
+
+        option {
+            background-color: var(--mildColor);
+        }
+    }
+
+    li {
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.bg-gin {
+            color: #2D8B41;
+            background-color: transparent;
+            border: 1px solid #2D8B41;
+        }
+
+        &.bg-mystic {
+            background-color: transparent;
+            border: 1px solid #3A6DAD;
+            color: #3A6DAD;
+        }
+
+        &.bg-roman {
+            background-color: transparent;
+            border: 1px solid #DF5858;
+            color: #DF5858;
+        }
+
+        &.bg-violet {
+            background-color: transparent;
+            border: 1px solid #6C47FF;
+            color: #6C47FF;
+        }
+    }
+
+    .hero-searchbox.form-group-wrap .form-group input,
+    .hero-wrap.style-three .hero-content .hero-searchbox.form-group-wrap .form-group input {
+        &::placeholder {
+            color: var(--whiteColor);
+            opacity: 1;
+        }
+    }
+
+    .hero-wrap.style-three .hero-content .hero-searchbox.form-group-wrap .form-group input,
+    .hero-wrap.style-three .hero-content .hero-searchbox.form-group-wrap .form-group select {
+        color: var(--whiteColor);
+    }
+
+    .popular-taglist ul li a {
+        color: var(--whiteColor);
+        background-color: var(--charcoalColor);
+
+        &:hover {
+            background-color: var(--secondaryColor);
+        }
+    }
+
+    .hero-searchbox.form-group-wrap .form-group select option {
+        background-color: var(--charcoalColor);
+    }
+
+    .hero-searchbox.form-group-wrap .form-group::after {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-close,
+    .promo-img-wrap .promo-shape {
+        filter: brightness(0.7) invert(1);
+    }
+
+    .faq-box .accordion-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    .faq-box .accordion-item .accordion-body {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .login-form-wrap .or-text:after,
+    .blog-area::after {
+        background-color: var(--charcoalColor);
+    }
+
+    .browse-candidate .browse-img-wrap .candidate-shape {
+        opacity: 0.2;
+    }
+
+    .job-card.style-one .job-action .add-to-bookmark,
+    .job-card.style-eight .job-action .add-to-bookmark,
+    .job-card.style-nine .job-action .add-to-bookmark,
+    .job-card.style-two .job-action .add-to-bookmark {
+        background-color: transparent;
+        border: 1px dashed rgba(255, 255, 255, 0.3) !important;
+
+        &:hover {
+            background-color: var(--primaryColor);
+        }
+    }
+
+    .page-nav li a.active,
+    .page-nav li a:hover {
+        color: var(--titleColor);
+    }
+
+    .apexcharts-title-text {
+        fill: var(--whiteColor) !important;
+    }
+
+    .db-content-box .filter-cat,
+    .apexcharts-legend-text {
+        color: var(--whiteColor) !important;
+    }
+
+    .apexcharts-tooltip.apexcharts-theme-light {
+        box-shadow: 2px 1px 22px rgba(101, 96, 240, 0.16);
+        background: rgba(0, 0, 0, 0.96);
+    }
+
+    .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .apexcharts-text.apexcharts-xaxis-label,
+    .apexcharts-text.apexcharts-yaxis-label {
+        fill: #fff;
+    }
+
+}
+
+@media only screen and (max-width:991px) {
+    .switch-theme-mode {
+        top: 270px;
+    }
+}

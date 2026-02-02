@@ -1,0 +1,283 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider     = "postgresql"
+    url          = env("DATABASE_URL")
+    relationMode = "prisma"
+}
+
+model User {
+    id                 Int           @id @default(autoincrement())
+    name               String
+    email              String        @unique
+    designation        String?
+    description        String?       @db.Text
+    cv                 String?
+    expected_salary    Int?
+    video_intro        String?
+    hashedPassword     String?
+    image              String?
+    role               Role          @default(USER)
+    gender             Gender?
+    email_confirmed    Boolean       @default(false)
+    email_confirmed_at DateTime?
+    is_active          Boolean       @default(true)
+    created_at         DateTime      @default(now())
+    updated_at         DateTime      @updatedAt
+    accounts           Account[]
+    profile            Profile?
+    companies          Company[]
+    educations         Education[]
+    experiences        Experience[]
+    portfolios         Portfolio[]
+    skills             SkillOnUser[] // Relation to skills
+    jobs               Job[]
+    favourites         Favourite[]
+    applications       Application[]
+
+    @@index([email])
+}
+
+model Account {
+    id                Int     @id @default(autoincrement())
+    userId            Int
+    type              String
+    provider          String
+    providerAccountId String
+    refresh_token     String?
+    access_token      String? @db.Text
+    expires_at        Int?
+    token_type        String?
+    scope             String?
+    id_token          String? @db.Text
+    session_state     String?
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@unique([provider, providerAccountId])
+    @@index([userId])
+}
+
+model Profile {
+    id       Int     @id @default(autoincrement())
+    userId   Int     @unique
+    location String?
+    phone    String?
+    website  String?
+    twitter  String?
+    facebook String?
+    linkedin String?
+    youtube  String?
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Skill {
+    id    Int           @id @default(autoincrement())
+    name  String        @unique
+    users SkillOnUser[]
+}
+
+model SkillOnUser {
+    id      Int @id @default(autoincrement())
+    userId  Int
+    skillId Int
+
+    user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+    skill Skill @relation(fields: [skillId], references: [id], onDelete: Cascade)
+
+    @@unique([userId, skillId]) // Composite unique constraint
+}
+
+model Education {
+    id          Int       @id @default(autoincrement())
+    userId      Int
+    institution String
+    degree      String
+    start_date  DateTime
+    end_date    DateTime?
+    description String?   @db.Text
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@index([userId])
+}
+
+model Portfolio {
+    id            Int     @id @default(autoincrement())
+    userId        Int
+    project_name  String
+    project_image String?
+    project_url   String?
+    description   String? @db.Text
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@index([userId])
+}
+
+model Experience {
+    id          Int       @id @default(autoincrement())
+    userId      Int
+    company     String
+    position    String
+    start_date  DateTime
+    end_date    DateTime?
+    description String?   @db.Text
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@index([userId])
+}
+
+model Company {
+    id           Int       @id @default(autoincrement())
+    userId       Int
+    name         String
+    slug         String    @unique
+    description  String?   @db.Text
+    location     String?
+    revenue      String?
+    phone        String?
+    email        String?
+    company_size String?
+    founded      DateTime?
+    logo_url     String?
+    website_url  String?
+    twitter_url  String?
+    facebook_url String?
+    linkedin_url String?
+    youtube_url  String?
+    created_at   DateTime  @default(now())
+    updated_at   DateTime  @updatedAt
+    jobs         Job[]
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@index([userId])
+}
+
+model Job {
+    id                Int     @id @default(autoincrement())
+    userId            Int
+    companyId         Int
+    categoryId        Int
+    title             String
+    slug              String  @unique
+    image             String
+    description       String  @db.Text
+    job_type          JobType
+    location          String
+    salary_range      String
+    position          String
+    experience        String
+    office_days       String? // E.g., "Monday to Friday"
+    holidays          String? // E.g., "Saturday to Sunday"
+    office_start_time String? // Store as time
+    office_end_time   String? // Store as time
+    featured          Boolean @default(false)
+    status            STATUS  @default(PENDING)
+
+    created_at DateTime @default(now())
+    updated_at DateTime @updatedAt
+
+    tags         JobTags[]
+    favourites   Favourite[]
+    applications Application[]
+    user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+    company      Company       @relation(fields: [companyId], references: [id], onDelete: Cascade)
+    category     Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+}
+
+model JobTags {
+    id    Int  @id @default(autoincrement())
+    job   Job? @relation(fields: [jobId], references: [id])
+    tag   Tag? @relation(fields: [tagId], references: [id])
+    jobId Int?
+    tagId Int?
+}
+
+model Tag {
+    id         Int       @id @default(autoincrement())
+    name       String    @unique
+    jobs       JobTags[]
+    created_at DateTime  @default(now())
+}
+
+model Category {
+    id    Int    @id @default(autoincrement())
+    label String @unique
+    value String @unique
+    slug  String @unique
+    jobs  Job[]
+}
+
+model Favourite {
+    id         Int      @id @default(autoincrement())
+    userId     Int
+    jobId      Int
+    created_at DateTime @default(now())
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+    job  Job  @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+    @@index([userId, jobId])
+}
+
+model Application {
+    id               Int               @id @default(autoincrement())
+    jobId            Int
+    userId           Int
+    application_date DateTime          @default(now())
+    status           ApplicationStatus @default(Pending)
+    cover_letter     String            @db.Text
+    expected_salary  String
+    created_at       DateTime          @default(now())
+
+    job  Job  @relation(fields: [jobId], references: [id], onDelete: Cascade)
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@index([userId, jobId])
+}
+
+enum Gender {
+    Male
+    Female
+}
+
+enum Role {
+    USER
+    EMPLOYER
+    ADMIN
+}
+
+enum JobType {
+    FULL_TIME
+    PART_TIME
+    CONTRACT
+    INTERNSHIP
+    FREELANCE
+    TEMPORARY
+}
+
+enum STATUS {
+    PENDING
+    APPROVED
+    EXPIRED
+    HOLD
+    RUNNING
+}
+
+enum ApplicationStatus {
+    Pending
+    Accepted
+    Rejected
+}

@@ -1,0 +1,706 @@
+// [dir=rtl] {
+
+// }
+
+[lang=ar] {
+
+  direction: rtl; 
+  
+  .me-sm-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+  }
+
+  .hero-searchbox {
+    &.form-group-wrap {
+      .form-group {
+        &:last-child {
+          button {
+            img {
+              margin-left: 0;
+              margin-right: 12px;
+            }
+          }
+        }
+        select {
+          background-position: calc(18% - 25px) calc(50% + 2px);
+        }
+      }
+    }
+  }
+  .popular-taglist {
+    span {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+    ul {
+      li { 
+        margin-right: 0;
+        margin-left: 3px;
+      } 
+    }
+  }
+
+  .feature-list {
+    li {
+      padding-left: 0; 
+      padding-right: 35px; 
+
+      i, img {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  .about-wrap {
+    .style-one {
+      .about-img-wrap {
+        .client-box {
+          p {
+            margin-left: 0; 
+            margin-right: auto; 
+          }
+        }
+      }
+    }
+  }
+
+  .job-tablist {
+    padding: 0;
+    .nav-item {
+      margin-right: 0; 
+      margin-left: 10px; 
+
+      &:last-child {
+        margin-left: 0; 
+      }
+    }
+  }
+
+  .job-card.style-one .job-title-wrap .job-title, .job-card.style-eight .job-title-wrap .job-title, .job-card.style-nine .job-title-wrap .job-title, .job-card.style-two .job-title-wrap .job-title {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .job-metainfo {
+    li {
+      margin-right: 0;
+      margin-left: 7px;
+
+      &:last-child {
+        margin-left: 0; 
+      }
+    }
+  }
+
+  .job-desc-meta {
+    li { 
+      margin-right: 0; 
+      margin-left: 18px; 
+      padding-left: 0;
+      padding-right: 25px;
+
+      &:last-child {
+        margin-left: 0; 
+      }
+
+      i, img {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+  .job-card.style-one .job-action .add-to-bookmark, .job-card.style-eight .job-action .add-to-bookmark, .job-card.style-nine .job-action .add-to-bookmark, .job-card.style-two .job-action .add-to-bookmark {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .join-us-accordion {
+    .accordion__item {
+      .accordion__heading {
+        .accordion__button:before {
+          float: left;
+          margin-right: 10px;
+          margin-left: 0; 
+        }
+      }
+    }
+  }
+
+  .blog-card.style-one .blog-metainfo li, .blog-card.style-two .blog-metainfo li {
+    padding-left: 0;
+    padding-right: 25px;
+  }
+  .blog-card.style-one .blog-metainfo li img, .blog-card.style-two .blog-metainfo li img {
+    left: auto;
+    right: 0;
+  }
+
+  .footer-wrap {
+    .footer-bottom {
+      .social-profile {
+        text-align: left !important;
+
+        li {
+          margin-right: 0;
+          margin-left: 16px;
+
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+  .breadcrumb-wrap {
+    .br-content {
+      .br-menu {
+        li {
+          margin-right: 0;
+          margin-left: 10px;
+          padding-right: 0;
+          padding-left: 38px;
+
+          &::after {
+            right: auto;
+            left: 0;
+          }
+
+          &:last-child { 
+            margin-left: 0; 
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .filter-cat { 
+    padding: 13px 35px 13px 20px; 
+  }
+
+  .tag-list {
+    li { 
+      margin: 11px 0 0px 10px;
+    }
+  }
+
+  .job-card.style-three .job-img-wrap .employer-logo-wrap, .job-card.style-seven .job-img-wrap .employer-logo-wrap, .job-card.style-five .job-img-wrap .employer-logo-wrap {
+    left: auto; 
+    right: 10px; 
+  }
+  .job-card.style-three .job-img-wrap .employer-logo-wrap .employer-logo, .job-card.style-seven .job-img-wrap .employer-logo-wrap .employer-logo, .job-card.style-five .job-img-wrap .employer-logo-wrap .employer-logo {
+    margin-right: auto;
+    margin-left: 10px;
+  }
+
+  .employer-card {
+    &.style-two {
+      .employer-title-wrap {
+        .employer-title {
+          margin-left: 0;
+          margin-right: auto;
+  
+          .employer-location {
+            img {
+              margin-right: 0;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+
+      .employer-action {
+        .add-to-bookmark {
+          margin-left: 0;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .checkbox {
+    input {
+      &:checked + label:after {
+        left: auto;
+        right: 10px;
+      }
+    }
+    label {
+      padding-left: 0;
+      padding-right: 29px;
+
+      &::before {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  
+ 
+
+  .blog-desc .blog-metainfo li, .job-desc .blog-metainfo li, .employer-desc .blog-metainfo li, .candidate-desc .blog-metainfo li, .terms-wrap .blog-metainfo li {
+    padding-left: 0;
+    padding-right: 25px;
+    margin-right: 0;
+    margin-left: 27px;
+
+    img {
+      left: auto;
+      right: 0;
+    }
+    &:last-child { 
+      margin-left: 0;
+    }
+    &:first-child { 
+      padding-right: 0;
+    }
+  }
+
+  .me-2 {
+    margin-right: 0 !important;
+    margin-left: .5rem !important;
+  }
+
+  .blog-desc .blog-taglist li, .job-desc .blog-taglist li, .employer-desc .blog-taglist li, .candidate-desc .blog-taglist li, .terms-wrap .blog-taglist li {
+    margin-right: 0;
+    margin-left: 3px;
+
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+
+  .blog-desc .content-feature-list.style-one li, .job-desc .content-feature-list.style-one li, .employer-desc .content-feature-list.style-one li, .candidate-desc .content-feature-list.style-one li, .terms-wrap .content-feature-list.style-one li { 
+    padding-left: 0;
+    padding-right: 33px;
+  }
+
+  .blog-desc .content-feature-list.style-one li i, .blog-desc .content-feature-list.style-one li img, .job-desc .content-feature-list.style-one li i, .job-desc .content-feature-list.style-one li img, .employer-desc .content-feature-list.style-one li i, .employer-desc .content-feature-list.style-one li img, .candidate-desc .content-feature-list.style-one li i, .candidate-desc .content-feature-list.style-one li img, .terms-wrap .content-feature-list.style-one li i, .terms-wrap .content-feature-list.style-one li img {
+    left: auto;
+    right: 0;
+  }
+
+  .blog-desc .content-feature-list.style-two li, .job-desc .content-feature-list.style-two li, .employer-desc .content-feature-list.style-two li, .candidate-desc .content-feature-list.style-two li, .terms-wrap .content-feature-list.style-two li {
+    padding-left: 0;
+    padding-right: 29px;
+  }
+
+  .blog-desc .content-feature-list.style-two li:before, .job-desc .content-feature-list.style-two li:before, .employer-desc .content-feature-list.style-two li:before, .candidate-desc .content-feature-list.style-two li:before, .terms-wrap .content-feature-list.style-two li:before {
+    left: auto;
+    right: 0;
+  }
+
+  .social-profile {
+    &.style-one {
+      li {
+        margin-right: 0;
+        margin-left: 10px;
+
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  
+  .post-pagination .prev-post span img {
+    margin-right: 0;
+    margin-left: 7px;
+  }
+
+  .pp-post-item {
+    .pp-post-info {
+      margin-left: 0;
+      margin-right: 18px;
+
+      .pp-post-item .pp-post-info .blog-metainfo li img {
+        position: relative;
+        top: -2px;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .post-pagination {
+    .next-post {
+      span {
+        img {
+          margin-left: 0;
+          margin-right: 7px;
+        }
+      }
+      
+    }
+  }
+  
+  .post-pagination {
+    .next-post {
+      .pp-post-item {
+        .pp-post-info {
+          margin-left: 18px;
+          margin-right: 0;
+
+          .blog-metainfo {
+            li {
+              img {
+                margin-right: 0;
+                margin-left: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .comment-item-wrap {
+    .comment-item {
+
+      &:after {
+        left: auto; 
+        right: 22px; 
+      }
+
+      .comment-author {
+        .comment-author-info {
+          margin-left: 0;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .candidate-card {
+    &.style-two {
+      .candidate-metainfo-wrap {
+        .candidate-metainfo {
+          .meta-info {
+            margin-left: 0;
+            margin-right: 12px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .searchbox-widget {
+    input {
+      padding: 12px 45px 12px 20px; 
+    }
+    img {
+      left: auto;
+      right: 15px;
+    }
+  }
+
+  .job-feature-item {
+    .feature-icon {
+      margin-right: 0;
+      margin-left: 13px;
+    }
+  }
+
+  .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+  }
+  .ms-1 {
+    margin-left: 0 !important;
+    margin-right: .25rem !important;
+  }
+
+  .job-desc {
+    .job-author {
+      .author-img {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .employer-desc {
+    .edu-item-wrap {
+      .edu-item {
+        .edu-icon {
+          left: auto; 
+          right: 0; 
+        }
+      }
+    }
+  }
+
+  .admin-dropdown {
+    .dropdown-menu {
+      left: 0;
+      right: auto;
+
+      li {
+        text-align: right;
+
+        a {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .job-card {
+    &.style-four {
+      .job-title-wrap {
+        .job-title {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .db-candidate-card {
+    .db-candidate-desc {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+
+  .employer-desc {
+    .edu-item-wrap {
+      .edu-item { 
+        padding-left: 0; 
+        padding-right: 66px; 
+
+        &::after {
+          left: auto;
+          right: 22px;
+        }
+      }
+    }
+  }
+
+  .db-job-card {
+    .job-title-wrap {
+      .job-title {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .end-0 {
+    right: auto !important;
+    left: 0;
+  }
+
+  .db-wrapper {
+    .db-sidebar {
+      .db-user-option {
+        button {
+          span {
+            margin-left: 0; 
+            margin-right: 10px; 
+          }
+        }
+      }
+
+      .db-menu {
+        li {
+          a {
+            padding: 11px 42px 11px 25px; 
+
+            i {
+              left: auto;
+              right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .modal-header {
+    .btn-close {
+      position: absolute;
+      left: 10px;
+    }
+  }
+  
+
+  // Responsive
+  @media only screen and (max-width: 767px) {
+
+    .hero-wrap {
+      &.style-one {
+        .hero-content {
+          .hero-searchbox {
+            &.form-group-wrap {
+              .form-group {
+                select {
+                  background-position: calc(3% - 5px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .job-card.style-three .job-img-wrap .employer-logo-wrap, .job-card.style-seven .job-img-wrap .employer-logo-wrap, .job-card.style-five .job-img-wrap .employer-logo-wrap {
+      left: auto; 
+      right: 10px; 
+    }
+    .job-card.style-three .job-img-wrap .employer-logo-wrap .employer-logo, .job-card.style-seven .job-img-wrap .employer-logo-wrap .employer-logo, .job-card.style-five .job-img-wrap .employer-logo-wrap .employer-logo {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .hero-searchbox {
+      &.form-group-wrap {
+        .form-group {
+          select {
+            background-position: calc(25% - 25px) calc(50% + 2px);
+          }
+        }
+      }
+    }
+
+    .app-box {
+      .app-btn-wrap {
+        a {
+          &:last-child { 
+            margin-left: 0;
+            margin-right: 15px; 
+          }
+        }
+      }
+    }
+
+    .job-card.style-three .job-img-wrap .employer-logo-wrap, .job-card.style-seven .job-img-wrap .employer-logo-wrap, .job-card.style-five .job-img-wrap .employer-logo-wrap {
+      left: auto; 
+      right: 10px; 
+    }
+    .job-card.style-three .job-img-wrap .employer-logo-wrap .employer-logo, .job-card.style-seven .job-img-wrap .employer-logo-wrap .employer-logo, .job-card.style-five .job-img-wrap .employer-logo-wrap .employer-logo {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+
+    .contact-card-wrap {
+      .contact-info-card {
+        &:nth-child(1) {
+          &:after {
+            right: auto;
+            left: 0;
+          }
+        }
+        &:nth-child(2) {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .hero-wrap.style-one .hero-content .hero-searchbox.form-group-wrap .form-group:nth-child(1):after {
+      right: auto;
+      left: -10px;
+    }
+    
+    .hero-wrap.style-one .hero-content .hero-searchbox.form-group-wrap .form-group:nth-child(2):after {
+      right: auto;
+      left: 0;
+    }
+
+    .contact-card-wrap {
+      .contact-info-card {
+        &:nth-child(1) {
+          &:after {
+            right: auto;
+            left: 0;
+          }
+        }
+        &:nth-child(2) {
+          &:after {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+    
+  }
+
+  @media only screen and (max-width: 991px) {
+    .admin-dropdown {
+      right: auto;
+      left: 50px;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+
+    .hero-wrap {
+      &.style-one {
+        .hero-content {
+          .hero-searchbox {
+            &.form-group-wrap {
+              .form-group {
+                &:nth-child(1) {
+                  &:after {
+                    right: auto;
+                    left: 0;
+                  }
+                }
+                &:nth-child(2) {
+                  &:after {
+                    right: auto;
+                    left: 0px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ps-xxl-45 {
+      padding-left: 0 !important;
+      padding-right: 1.75rem !important;
+    }
+
+    .contact-card-wrap {
+      .contact-info-card {
+        &:nth-child(1) {
+          &:after {
+            right: auto;
+            left: 0;
+          }
+        }
+        &:nth-child(2) {
+          &:after {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+
+  }
+}

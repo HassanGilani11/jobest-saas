@@ -1,0 +1,42 @@
+{
+	"navigation": {
+		"login": "Login",
+		"register": "Register Now",
+		"links": [
+			{
+				"path": "/",
+				"name": "Home"
+			},
+			{
+				"path": "/jobs",
+				"name": "Find Jobs"
+			},
+			{
+				"path": "/employers",
+				"name": "Employers"
+			},
+			{
+				"path": "/candidates",
+				"name": "Candidates"
+			},
+			{
+				"path": "/blog",
+				"name": "Blog"
+			},
+			{
+				"path": "/about",
+				"name": "About"
+			},
+			{
+				"path": "/contact",
+				"name": "Contact"
+			}
+		]
+	},
+	"homepage": {
+		"banner": {
+			"h1": "Unlock Your Future: Find Your <strong>Perfect Job</strong> Today!",
+			"p": "Welcome to Jobest, where your dream job awaits! Browse thousands of job listings."
+		}
+	}
+}
