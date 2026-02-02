@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jobest - Job Posting and Job-Seeking SaaS
 
-## Getting Started
+Jobest is a modern, full-featured Job Portal SaaS application built with **Next.js 15**, **Prisma**, and **PostgreSQL**. It connects candidates with employers, offering advanced dashboards, multi-language support (English, French, Arabic), and seamless job management.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+-   **Database**: PostgreSQL (via [Prisma ORM](https://www.prisma.io/))
+-   **Authentication**: [NextAuth.js](https://next-auth.js.org/) (Google, GitHub, Credentials)
+-   **Styling**: Bootstrap 5, Sass, Custom CSS
+-   **Image Uploads**: [Cloudinary](https://cloudinary.com/)
+-   **Internationalization**: Custom i18n implementation (en, fr, ar)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Key Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### For Candidates
+-   **Professional Profile**: Manage experience, education, and skills.
+-   **Job Search**: Advanced filtering by category, location, and type.
+-   **Applications**: Track applied jobs and status in real-time.
+-   **CV Upload**: Resume management via Cloudinary.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### For Employers
+-   **Company Profile**: Manage company details and branding.
+-   **Job Posting**: Create and manage job listings with rich details.
+-   **Applicant Tracking**: View and manage candidate applications.
 
-## Learn More
+### Admin Dashboard
+-   **Overview**: System-wide statistics.
+-   **Management**: Moderate companies, jobs, and users.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
+-   Node.js 18+
+-   PostgreSQL Database (Local or Cloud like Neon/Supabase)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/HassanGilani11/jobest-saas.git
+    cd jobest-saas
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3.  **Environment Setup**:
+    Create a `.env` file in the root directory (copy `.env.example` if available) and add:
+    ```env
+    # Database
+    DATABASE_URL="postgresql://user:password@host:port/dbname?schema=public"
+
+    # NextAuth
+    NEXTAUTH_URL="http://localhost:3000"
+    NEXTAUTH_SECRET="your-super-secret-key"
+
+    # Auth Providers
+    GITHUB_ID="your-github-id"
+    GITHUB_SECRET="your-github-secret"
+    GOOGLE_CLIENT_ID="your-google-client-id"
+    GOOGLE_CLIENT_SECRET="your-google-client-secret"
+
+    # Cloudinary
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="your-cloud-name"
+    NEXT_PUBLIC_CLOUDINARY_PRESET="your-upload-preset"
+    CLOUDINARY_URL="cloudinary://key:secret@cloud_name"
+    ```
+
+4.  **Database Setup**:
+    Push the schema to your database:
+    ```bash
+    npx prisma db push
+    ```
+
+5.  **Run the Application**:
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🔑 Admin Access (Development Only)
+
+By default, new users are registered with the `USER` role. To access the Admin Dashboard during development:
+
+1.  Register/Login as a normal user.
+2.  Visit this temporary URL: **[http://localhost:3000/api/admin/promote-me](http://localhost:3000/api/admin/promote-me)**
+3.  You will receive a success message promoting you to `ADMIN`.
+4.  Access the dashboard at **[http://localhost:3000/en/admin/dashboard](http://localhost:3000/en/admin/dashboard)**.
+
+> **Note**: Remove the `/api/admin/promote-me` route before deploying to production!
+
+## 🤝 Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
