@@ -1,0 +1,32 @@
+
+> jobest@1.0.0 build
+> next build
+
+⚠ `images.domains` is deprecated in favor of `images.remotePatterns`. Please update next.config.mjs to protect your application from malicious users.
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/styles/dark-theme.css:259:235
+Parsing CSS source code failed
+[0m [90m 257 |[39m   color[33m:[39m [36mvar[39m([33m--[39mwhiteColor)[33m;[39m
+ [90m 258 |[39m }
+[31m[1m>[22m[39m[90m 259 |[39m [33m.[39mtheme[33m-[39mdark [33m.[39mnavbar[33m-[39marea [33m.[39mnavbar [33m.[39mnavbar[33m-[39mnav [33m.[39mnav[33m-[39mitem [33m.[39mdropdown[33m-[39mmenu [33m.[39mnav[33m-[39mitem [33m.[39mnav[33m-[39mlink[33m.[39mdropdown[33m-[39mtoggle[33m:[39m[33m:[39mbefore[33m:[39mhover[33m,[39m [33m.[39mtheme[33m-[39mdark [33m.[39mnavbar[33m-[39marea [33m.[39mnavbar [33m.[39mnavbar[33m-[39mnav [33m.[39mnav[33m-[39mitem [33m.[39mdropdown[33m-[39mmenu [33m.[39mnav[33m-[39mitem [33m.[39mnav[33m-[39mlink[33m.[39mdropdown[33m-[39mtoggle[33m:[39m[33m:[39mbefore[33m.[39mactive[33m,[39m
+ [90m     |[39m                                                                                                                                                                                                                                           [31m[1m^[22m[39m
+ [90m 260 |[39m [33m.[39mtheme[33m-[39mdark [33m.[39mcomment[33m-[39mitem[33m-[39mwrap [33m.[39mcomment[33m-[39mitem [33m.[39mcomment[33m-[39minfo [33m.[39mreply[33m-[39mbtn[33m:[39mhover[33m,[39m
+ [90m 261 |[39m [33m.[39mtheme[33m-[39mdark [33m.[39mcomment[33m-[39mitem[33m-[39mwrap [33m.[39mcomment[33m-[39mitem [33m.[39mcomment[33m-[39minfo [33m.[39mreply[33m-[39mbtn[33m.[39mactive[33m,[39m
+ [90m 262 |[39m [33m.[39mtheme[33m-[39mdark [33m.[39mnavbar[33m-[39marea [33m.[39mnavbar [33m.[39mnavbar[33m-[39mnav [33m.[39mnav[33m-[39mitem [33m.[39mnav[33m-[39mlink[33m:[39mhover[33m,[39m[0m
+
+Pseudo-elements like '::before' or '::after' can't be followed by selectors like 'Delim('.')'
+
+Import trace:
+  Client Component Browser:
+    ./src/styles/dark-theme.css [Client Component Browser]
+    ./src/app/[lang]/layout.js [Server Component]
+
+
+    at <unknown> (./src/styles/dark-theme.css:259:235)

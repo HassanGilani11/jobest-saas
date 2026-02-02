@@ -256,7 +256,7 @@ input:checked + .slider:before {
 .theme-dark .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link {
   color: var(--whiteColor);
 }
-.theme-dark .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.dropdown-toggle::before:hover, .theme-dark .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.dropdown-toggle::before.active,
+.theme-dark .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.dropdown-toggle:hover::before, .theme-dark .navbar-area .navbar .navbar-nav .nav-item .dropdown-menu .nav-item .nav-link.dropdown-toggle.active::before,
 .theme-dark .comment-item-wrap .comment-item .comment-info .reply-btn:hover,
 .theme-dark .comment-item-wrap .comment-item .comment-info .reply-btn.active,
 .theme-dark .navbar-area .navbar .navbar-nav .nav-item .nav-link:hover,
